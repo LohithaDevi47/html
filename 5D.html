@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>CSS Box Model Demonstration</title> 
+<style> 
+body { 
+font-family: Arial, sans-serif; 
+text-align: center; 
+background-color: #e0f7fa; 
+} 
+.box { 
+width: 280px; 
+background-color: #ffffff; 
+padding: 25px; /* space inside the border */ 
+border: 8px solid #00796b; /* box border */ 
+margin: 15px auto; /* space outside the box */ 
+text-align: center; 
+box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2); 
+border-radius: 8px; 
+} 
+.label { 
+font-weight: bold; 
+color: #004d40; 
+margin-bottom: 8px; 
+        } 
+        .content { 
+            background-color: #b2dfdb; 
+            padding: 8px; 
+        } 
+ 
+        /* Modified individual boxes for demonstration */ 
+        .padding-demo { 
+            padding: 40px; 
+            background-color: #e0f2f1; 
+        } 
+ 
+        .border-demo { 
+            border: 8px dashed #d32f2f; 
+            background-color: #ffebee; 
+        } 
+ 
+        .margin-demo { 
+            margin: 60px auto; 
+            background-color: #fce4ec; 
+        } 
+ 
+        .content-demo { 
+            width: 200px; 
+            margin: 0 auto; 
+            background-color: #c8e6c9; 
+     padding: 10; 
+        } 
+    </style> 
+</head> 
+<body> 
+ 
+    <h2>CSS Box Model Demonstration</h2> 
+ 
+    <div class="box content-demo"> 
+        <div class="label">Content</div> 
+        <div class="content">This is the content area</div> 
+    </div> 
+ 
+    <div class="box padding-demo"> 
+        <div class="label">Padding</div> 
+        <div class="content">This box has extra padding</div> 
+    </div> 
+ 
+    <div class="box border-demo"> 
+        <div class="label">Border</div> 
+        <div class="content">This box has a thick dashed border</div> 
+    </div> 
+ 
+    <div class="box margin-demo"> 
+<div class="label">Margin</div> 
+<div class="content">This box has extra margin</div> 
+</div> 
+</body> 
+</html>
