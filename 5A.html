@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<title>CSS Color References</title> 
+<style> 
+/* Defining CSS variables */ 
+:root { --custom-blue: #4A90E2; --custom-green: rgb(34, 197, 94); 
+} 
+body { 
+display: flex; 
+flex-wrap: wrap; 
+justify-content: center; 
+align-items: center; 
+min-height: 100vh; 
+background-color: #f4f4f4; 
+font-family: Arial, sans-serif; 
+} 
+.color-box { 
+width: 200px; 
+height: 200px; 
+display: flex; 
+align-items: center; 
+justify-content: center; 
+color: white; 
+font-weight: bold; 
+font-size: 14px; 
+text-align: center; 
+margin: 10px; 
+border-radius: 10px; 
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
+} 
+/* Different ways to define colors */ 
+.named-color { background-color: red; } 
+.hex-color { background-color: #00ff00; color: black; } /* Green */ 
+.short-hex-color { background-color: #0af; } /* Light Blue */ 
+.rgb-color { background-color: rgb(255, 165, 0); } /* Orange */ 
+.rgba-color { background-color: rgba(255, 0, 0, 0.5); } /* Semi-transparent Red */ 
+.hsl-color { background-color: hsl(240, 100%, 50%); } /* Blue */ 
+.hsla-color { background-color: hsla(300, 76%, 72%, 0.8); color: black; } /* Semi
+transparent Pink */ 
+.css-variable { background-color: var(--custom-blue); } /* Custom variable */ 
+.css-variable-green { background-color: var(--custom-green); color: black; } /* Custom 
+Green */ 
+</style> 
+</head> 
+<body> 
+<div class="color-box named-color">Named Color: Red</div> 
+<div class="color-box hex-color">Hex: #00ff00</div> 
+<div class="color-box short-hex-color">Short Hex: #0af</div> 
+<div class="color-box rgb-color">RGB: rgb(255, 165, 0)</div> 
+<div class="color-box rgba-color">RGBA: rgba(255, 0, 0, 0.5)</div> 
+<div class="color-box hsl-color">HSL: hsl(240, 100%, 50%)</div> 
+<div class="color-box hsla-color">HSLA: hsla(300, 76%, 72%, 0.8)</div> 
+<div class="color-box css-variable">CSS Variable: var(--custom-blue)</div> 
+<div class="color-box css-variable-green">CSS Variable: var(--custom-green)</div> 
+</body> 
+</html> 
