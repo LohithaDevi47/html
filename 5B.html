@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<title>Fixed Background Image Halfway Down</title> 
+<style> 
+body { 
+margin: 0; 
+font-family: Arial, sans-serif; 
+color: white; 
+text-align: center; 
+background-color: #333; 
+} 
+/* Ensures enough scrolling space */ 
+.content { 
+height: 200vh; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+font-size: 24px; 
+} 
+/* Background Image Section */ 
+.background-image { 
+position: fixed; 
+top: 50%; 
+left: 0; 
+width: 100%; 
+height: 50vh; 
+background-image: url('https://www.tutorialkart.com/img/mountains.jpg'); 
+background-size: cover; 
+background-position: center; 
+transform: scaleX(-1); /* Flip horizontally */ 
+z-index: -1; /* Keeps it in the background */ 
+} 
+/* Text Content on Top */ 
+.text-overlay { 
+position: relative; 
+z-index: 1; 
+font-size: 28px; 
+font-weight: bold; 
+} 
+</style> 
+</head> 
+<body> 
+<div class="content"> 
+<div class="text-overlay"> 
+Scroll to see the effect. The background stays fixed! 
+</div> 
+</div> 
+<div class="background-image"></div> 
+</body> 
+</html> 
