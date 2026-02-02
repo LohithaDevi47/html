@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>JavaScript Input Methods</title>
+</head>
+<body>
+ <h1>JavaScript Input Methods</h1>
+ <button onclick="usePrompt()">Take Input using Prompt</button>
+ <button onclick="useConfirm()">Take Input using Confirm</button>
+ <br><br>
+ <!-- Input field -->
+ <label for="userInput">Enter your name: </label>
+ <input type="text" id="userInput" placeholder="Type something">
+ <button onclick="getInputValue()">Submit</button>
+ <p id="output"></p>
+ <script>
+ // 1. Taking input using prompt()
+ function usePrompt() {
+ let name = prompt("Enter your name:");
+ if (name) {
+ document.getElementById("output").innerHTML = "HELLO! " + name;
+ } else {
+ document.getElementById("output").innerHTML = "You did not enter anything.";
+ }
+ }
+ // 2. Taking input using an HTML input field
+ function getInputValue() {
+ let inputValue = document.getElementById("userInput").value;
+ document.getElementById("output").innerHTML = "Input value: " + inputValue;
+ }
+ // 3. Taking input using confirm()
+ function useConfirm() {
+ let response = confirm("Do you like JavaScript?");
+ if (response) {
+ document.getElementById("output").innerHTML = "You clicked OK! ";
+ } else {
+ document.getElementById("output").innerHTML = "You clicked Cancel. ";
+ }
+ }
+ </script>
+</body>
+</html>
