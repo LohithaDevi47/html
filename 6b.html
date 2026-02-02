@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>JavaScript Output Methods</title>
+</head>
+<body>
+ <h1>JavaScript Output Methods</h1>
+ <button onclick="showAlert()">Show Alert</button>
+ <button onclick="writeToDocument()">Write to Document</button>
+ <button onclick="updateInnerHTML()">Update HTML</button>
+ <button onclick="logToConsole()">Log to Console</button>
+ <button onclick="printPage()">Print Page</button>
+ <p id="output">This text will be updated using innerHTML.</p>
+ <script>
+ // 1. Display output using alert()
+ function showAlert() {
+ alert("This is an alert box!");
+ }
+ // 2. Display output using document.write()
+ function writeToDocument() {
+ document.write("This text is written using document.write()");
+ }
+ // 3. Display output using innerHTML
+ function updateInnerHTML() {
+ document.getElementById("output").innerHTML =
+ "Updated using innerHTML!";
+ }
+ // 4. Display output using console.log()
+ function logToConsole() {
+ console.log("This is a console message.");
+ }
+ // 5. Display output using window.print()
+ function printPage() {
+ window.print();
+ }
+ </script>
+</body>
+</html>
