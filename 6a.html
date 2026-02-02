@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Embed Internal and External JavaScript</title>
+ <script>
+ // Internal JavaScript
+ function internalMessage() {
+ alert ("Hello from Internal JavaScript!");
+ }
+ </script>
+</head>
+<body>
+ <h1>JavaScript Embedding Example</h1>
+ 
+ <button onclick="internalMessage()">Click for Internal JS</button>
+ <button onclick="externalMessage()">Click for External JS</button>
+ <!-- Linking External JavaScript -->
+ <script src="script.js"></script>
+</body>
+</html>
+script.js
+// External JavaScript
+function externalMessage() {
+ alert ("Hello from External JavaScript!");
+}
