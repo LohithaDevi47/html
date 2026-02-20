@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>My College - Student Details</title>
+ <script>
+ // User-defined object constructor for Student
+ function Student(name, id, branch) {
+ this.name = name;
+ this.id = id;
+ this.branch = branch;
+ // Method to display student details using document methods
+ this.displayDetails = function() {
+ // Create a div element to hold the student details
+ var studentDiv = document.createElement('div');
+ studentDiv.innerHTML = '<h2>Student Details</h2>' +
+ '<p><strong>Name:</strong> ' + this.name + '</p>' +
+ '<p><strong>ID:</strong> ' + this.id + '</p>' +
+ '<p><strong>Branch:</strong> ' + this.branch + '</p>';
+ // Append the div to the body using the pre-defined document object
+ document.body.appendChild(studentDiv);
+ }
+ }
+ // Use window.onload to run code after the document is fully loaded
+ window.onload = function()
+{
+ // Create a header element using a document method
+ var header = document.createElement('h1');
+ header.textContent = 'My College - Student Details';
+ document.body.appendChild(header);
+ // Create an instance of the user-defined Student object
+ var student1 = new Student("Arjun", "A001", "Computer Science");
+
+ // Call the method to display the student's details
+ student1.displayDetails();
+ // Create a paragraph element to provide additional information
+ var infoPara = document.createElement('p');
+ infoPara.textContent = 'For more information, visit admin department.';
+ document.body.appendChild(infoPara);
+ }
+ </script>
+</head>
+<body>
+</body>
+</html>
