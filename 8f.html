@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Bank Denomination Calculator</title>
+ <script type="text/javascript">
+ function calculateDenominations(event) {
+ event.preventDefault();
+ var amount = parseInt(document.getElementById("amount").value, 10);
+ if (isNaN(amount) || amount < 0) {
+ document.getElementById("result").innerText = "Please enter a valid positive number.";
+ return;
+ }
+ var denominations = [100, 50, 20, 10, 5, 2, 1];
+ var breakdown = [];
+ var remaining = amount;
+ denominations.forEach(function(denom) {
+ var count = Math.floor(remaining / denom);
+ if (count > 0) {
+ breakdown.push(count + "-" + denom + "'s");
+ remaining = remaining % denom;
+ }
+ }); 
+ document.getElementById("result").innerText = "Breakdown: " + breakdown.join(", ");
+ }
+ </script>
+</head>
+<body>
+ <h1>Bank Denomination Calculator</h1>
+ <form onsubmit="calculateDenominations(event)">
+ <label for="amount">Enter deposited amount (in Rs): </label>
+ <input type="number" id="amount" required>
+ <button type="submit">Calculate</button>
+ </form>
+ <div id="result" style="margin-top:20px; font-size:1.2em;"></div>
+</body>
+</html>
