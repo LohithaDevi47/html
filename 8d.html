@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Print Object Data Using Different Loops</title>
+ <script type="text/javascript">
+ window.onload = function() {
+ var person = {
+ name: "Arjun",
+ age: 19,
+ city: "Hyderabad"
+ };
+
+ var forInOutput = "";
+ for (var key in person) {
+ if (person.hasOwnProperty(key)) {
+ forInOutput += key + ": " + person[key] + "<br>";
+ }
+ }
+ document.getElementById("forIn").innerHTML = "For-in Loop:<br>" + forInOutput;
+ var forEachOutput = "";
+ Object.keys(person).forEach(function(key) {
+ forEachOutput += key + ": " + person[key] + "<br>";
+ });
+ document.getElementById("forEach").innerHTML = "forEach Loop:<br>" + 
+forEachOutput;
+ var forOfOutput = "";
+ for (var [key, value] of Object.entries(person)) {
+ forOfOutput += key + ": " + value + "<br>";
+ }
+ document.getElementById("forOf").innerHTML = "for-of Loop:<br>" + forOfOutput;
+ }
+ </script>
+</head>
+<body>
+ <h1>Printing Object Data Using Different Loops</h1>
+ <div id="forIn" style="margin-bottom:20px; font-size:1.2em;"></div>
+ <div id="forEach" style="margin-bottom:20px; font-size:1.2em;"></div>
+ <div id="forOf" style="margin-bottom:20px; font-size:1.2em;"></div>
+</body>
+</html>
