@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Display Weekday using Switch Case</title>
+ <script type="text/javascript">
+ function displayWeekDay() {
+ // Create a new Date object
+ var currentDate = new Date();
+ var dayNumber = currentDate.getDay();
+ var dayName = "";
+ switch(dayNumber) {
+ case 0:
+ dayName = "Sunday";
+ break;
+ case 1:
+ dayName = "Monday";
+ break;
+ case 2:
+ dayName = "Tuesday";
+ break;
+ case 3:
+ dayName = "Wednesday";
+ break;
+ case 4:
+ dayName = "Thursday";
+ break;
+ case 5:
+ dayName = "Friday";
+ break;
+ case 6:
+ dayName = "Saturday";
+ break;
+ default:
+ dayName = "Unknown Day";
+ }
+ // Display the result in the designated div
+ document.getElementById("weekday").innerText = "Today is: " + dayName;
+ }
+ // Call the function once the page loads
+ window.onload = displayWeekDay;
+ </script>
+</head>
+<body>
+ <h1>Weekday Display using Switch Case</h1>
+ <div id="weekday" style="margin-top:20px; font-size:1.5em;"></div>
+</body>
+</html>
