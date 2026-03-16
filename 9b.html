@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Functions</title>
+
+<script>
+
+// Factorial
+function factorial() {
+    let n = parseInt(document.getElementById("num").value);
+    let fact = 1;
+
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    document.getElementById("result").innerHTML = "Factorial = " + fact;
+}
+
+// Fibonacci
+function fibonacci() {
+    let n = parseInt(document.getElementById("num").value);
+    let a = 0, b = 1, c;
+    let fib = a + " " + b + " ";
+
+    for (let i = 2; i < n; i++) {
+        c = a + b;
+        fib += c + " ";
+        a = b;
+        b = c;
+    }
+
+    document.getElementById("result").innerHTML = "Fibonacci = " + fib;
+}
+
+// Prime check
+function prime() {
+    let n = parseInt(document.getElementById("num").value);
+    let flag = true;
+
+    if (n <= 1) flag = false;
+
+    for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+            flag = false;
+            break;
+        }
+    }
+
+    if (flag)
+        document.getElementById("result").innerHTML = "Prime Number";
+    else
+        document.getElementById("result").innerHTML = "Not Prime Number";
+}
+
+// Palindrome check
+function palindrome() {
+    let n = document.getElementById("num").value;
+    let rev = n.split("").reverse().join("");
+
+    if (n == rev)
+        document.getElementById("result").innerHTML = "Palindrome";
+    else
+        document.getElementById("result").innerHTML = "Not Palindrome";
+}
+
+</script>
+</head>
+
+<body>
+
+<h2>JavaScript Functions</h2>
+
+Enter Number:
+<input type="text" id="num"><br><br>
+
+<button onclick="factorial()">Factorial</button>
+<button onclick="fibonacci()">Fibonacci</button>
+<button onclick="prime()">Prime</button>
+<button onclick="palindrome()">Palindrome</button>
+
+<p id="result"></p>
+
+</body>
+</html>
