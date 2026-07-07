@@ -1,0 +1,22 @@
+<div class="container mt-4" style="max-width:500px;">
+    <h4>Chat with {{ user }}</h4>
+
+    <!-- Chat Box -->
+    <div class="border p-3 bg-white mb-3" style="height:300px; overflow-y:auto;">
+        {% for sender, msg in chats %}
+            <div class="mb-2 text-{{ 'end' if sender==current_user else 'start' }}">
+                <span class="badge bg-{{ 'primary' if sender==current_user else 'secondary' }}">
+                    {{ msg }}
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Send Message -->
+    <form method="POST" class="d-flex">
+        <input type="text" name="message" class="form-control me-2" required>
+        <button class="btn btn-primary">Send</button>
+    </form>
+
+    <a href="/" class="btn btn-link mt-2">⬅ Back</a>
+</div>
